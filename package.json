@@ -6,11 +6,11 @@
     "/gdc": {
       "changeOrigin": true,
       "cookieDomainRewrite": "localhost",
-      "target": "https://whitelabeling.gooddata.com/"
+      "target": "https://secure.gooddata.com/"
     },
     "/*.html": {
       "changeOrigin": true,
-      "target": "https://whitelabeling.gooddata.com/"
+      "target": "https://secure.gooddata.com/"
     }
   },
   "dependencies": {
