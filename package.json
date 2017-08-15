@@ -1,0 +1,30 @@
+{
+  "name": "gd-first-sba",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": {
+    "/gdc": {
+      "changeOrigin": true,
+      "cookieDomainRewrite": "localhost",
+      "target": "https://whitelabeling.gooddata.com/"
+    },
+    "/*.html": {
+      "changeOrigin": true,
+      "target": "https://whitelabeling.gooddata.com/"
+    }
+  },
+  "dependencies": {
+    "@gooddata/data-layer": "^1.0.1",
+    "@gooddata/react-components": "^1.1.0-jza-jza-bb-148-metric-ids-2017-08-07T16-17-17-620Z",
+    "gooddata": "^2.2.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
