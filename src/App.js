@@ -12,12 +12,14 @@ class App extends Component {
         <div className="App-header">
           <p>GoodData Javascript UI SDK</p>
         </div>
+
         <div className="gd-metric">
-          <Kpi
+          <p>KPI: <Kpi
             projectId="nrjs8u9m5y01o8b3584jrx8rosc0ynhw"
-            measure={C['Total Revenue [SUM] Activewear']} />
+            measure={C['Total Revenue [SUM] Activewear']} /></p>
         </div>
-        <SingleMeasure/>
+
+        <SingleMeasure measure="Total Revenue [SUM] Activewear" title="Total Revenue"/>
       </div>
     );
   }
