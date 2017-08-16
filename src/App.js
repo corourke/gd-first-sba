@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Kpi  } from '@gooddata/react-components'
+import { Kpi } from '@gooddata/react-components'
 import C from './catalog'
+import GD from './gooddataConfig'
 
 import SingleMeasure from './SingleMeasure'
+import TableView from './TableView'
 
 class App extends Component {
   render() {
@@ -13,13 +15,15 @@ class App extends Component {
           <p>GoodData Javascript UI SDK</p>
         </div>
 
-        <div className="gd-metric">
-          <p>KPI: <Kpi
-            projectId="nrjs8u9m5y01o8b3584jrx8rosc0ynhw"
-            measure={C['Total Revenue [SUM] Activewear']} /></p>
-        </div>
+        <p>Using a KPI... The total sales for this month is:&nbsp;
+          <Kpi
+            projectId={GD.workspace}
+            measure={C['Total Revenue [SUM] Activewear']}
+            format="#,.0K" /> which is above target.
+        </p>
 
         <SingleMeasure measure="Total Revenue [SUM] Activewear" title="Total Revenue"/>
+
       </div>
     );
   }

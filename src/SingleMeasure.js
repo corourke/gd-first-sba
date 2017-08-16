@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { DataTable, SimpleExecutorAdapter } from '@gooddata/data-layer';
 import * as sdk from 'gooddata';
 import C from './catalog'
+import GD from './gooddataConfig'
+import './App.css';
 
-const adapter = new SimpleExecutorAdapter(sdk, 'nrjs8u9m5y01o8b3584jrx8rosc0ynhw');
+const adapter = new SimpleExecutorAdapter(sdk, GD.workspace);
 
 const dataTable = new DataTable(adapter);
 
@@ -49,12 +51,12 @@ class SingleMeasure extends Component {
     let data = this.state.data
 
     return (
-      !data.headers ?
-      <div>Loading...</div>
+      !data.isLoaded ?
+      <div className="gd-metric">Loading...</div>
       :
-      <div>
-        <div>{data.headers[0].id}</div>
-        <div>{data.rawData[0]}</div>
+      <div className="gd-metric">
+        <div className="gd-metric-name">{data.headers[0].title}</div>
+        <div className="gd-metric-value">{data.rawData[0]}</div>
       </div>
     );
   }
