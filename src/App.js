@@ -5,7 +5,6 @@ import C from './catalog'
 import GD from './gooddataConfig'
 
 import SingleMeasure from './SingleMeasure'
-import TableView from './TableView'
 
 class App extends Component {
   render() {
