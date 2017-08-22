@@ -5,6 +5,7 @@ import C from './catalog'
 import GD from './gooddataConfig'
 
 import SingleMeasure from './SingleMeasure'
+import SmallTable from './SmallTable'
 
 class App extends Component {
   render() {
@@ -22,6 +23,8 @@ class App extends Component {
         </p>
 
         <SingleMeasure measure="Total Revenue [SUM] Activewear" title="Total Revenue"/>
+
+        <SmallTable measure="Total Revenue [SUM]" dimension="Sub Category Description" title="Total Revenue" />
 
       </div>
     );

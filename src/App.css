@@ -61,3 +61,29 @@ div.App-header p {
   float: left;
 }
 
+div.gd-table {
+  clear: left;
+  display: block;
+  float: left;
+}
+
+.gd-table tbody {
+  border: solid;
+  border-width: 1px;
+  border-color: #999999;
+  border-radius: 2px;
+  padding: 0px;
+  margin: 10px;
+  background: #fafafa;
+  font-size: small;
+
+}
+
+.gd-table td {
+  padding: 6px 10px;
+}
+
+.gd-table tr:nth-child(odd) {
+  background: #ebebeb;
+}
+
