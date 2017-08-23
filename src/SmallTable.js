@@ -69,7 +69,9 @@ class SingleMeasure extends Component {
       :
       <div className="gd-table">
         <table>
-          <caption>{this.props.title}</caption>
+          <thead>
+            <caption>{this.props.title}</caption>
+          </thead>
           <tbody>
           { data.rawData.map( (item) => (
             <tr key={item[0].id}>

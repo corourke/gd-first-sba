@@ -2,11 +2,6 @@
   text-align: left;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #333;
   height: 26px;
@@ -24,11 +19,6 @@ div.App-header p {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .gd-metric {
   #width: 160px;
   #height: 100px;
@@ -41,11 +31,13 @@ div.App-header p {
   color: white;
 }
 
-.gd-metric-name {
+.gd-metric-name, .gd-table caption {
+  display: inline-block;
   font-size: small;
   text-transform: uppercase;
   font-weight: 100;
   margin: 0px;
+  text-align: left;
 }
 
 .gd-metric-value {
@@ -65,15 +57,17 @@ div.gd-table {
   clear: left;
   display: block;
   float: left;
+  margin: 10px;
 }
 
-.gd-table tbody {
+.gd-table table {
+  padding: 10px;
   border: solid;
   border-width: 1px;
-  border-color: #999999;
+  border-color: rgba(191, 191, 191, 0.96);
   border-radius: 2px;
-  padding: 0px;
-  margin: 10px;
+}
+.gd-table tbody {
   background: #fafafa;
   font-size: small;
 
